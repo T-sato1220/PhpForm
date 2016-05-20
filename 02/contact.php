@@ -14,48 +14,53 @@
     <!-- 名前-->
 <h1><center>お問い合わせ</center></h1>
 <form action="result.php" method="post">
-<u1>
-<h2><li>性：<input type = "textbox" name="name1" size="20"></li>
-<li>名：<input type = "textbox" name="name2" size="20"></li>
+<h2><dt><li>性</li></dt><dd><input required type = "textbox" name="name1" size="20"></dd>
+<dt><li>名：</li></dt><dd><input  required type = "textbox" name="name2" size="20"><dd></h2>
 　   <!--//性別-->
-<li>性別：<input  type = "radio" name="rdo" value =0 checked >不明
+<h2><dt><li>性別</li></dt><dd><input   type = "radio" name="rdo" value =0 checked >不明
 <input type = "radio" name="rdo" value =1 >男
-<input type = "radio" name="rdo" value =2 >女</li>
+<input type = "radio" name="rdo" value =2 >女</dd>
     <!--//住所-->
-<li>住所：<input type = "textbox" name="address" size="20"></li>
+<dt><li>住所</li></dt><dd><input  required type = "textbox" name="address" size="20"></dd>
     <!--//電話番号-->
-<li>電話番号：<input type = "textbox" name="tell1" size="20">
--<input type = "textbox" name="tell2" size="20">
--<input type = "textbox" name="tell3" size="20"></li>
+<dt><li>電話番号</li></dt><dd><input required type = "number"  min="0" max="9999" step="1" style="width:100px" name="tell1">
+- <input required type = "number" min="0" max="9999" step="1" style="width:100px" name="tell2">
+- <input required type = "number"min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
     <!--//アドレス-->
-<li>E-mail:<input type = "textbox" name="mail1" size="20">@<input type = "textbox" name="mail2" size="20"></li>
+<dt><li>E-mail</li></dt><dd><input required type = "text"    name="mail1" pattern="^[0-9A-Za-z]+$" size="20"> @
+    <input required type = "text" name="mail2"  pattern="^[0-9A-Za-z]+$" size="20"></dd>
+</h2>
 
-</ul>
 <u1>
     <!--サイトをどこで知ったか-->
+    <h3>
 <p><li>こちらのサイトをどこで知りましたか？</li>
+    <inp>
 <input type="hidden" name="where" value="0">
-<input type="checkbox" name="where[]" value="インターネット" >インターネット
-<input type="checkbox" name="where[]" value="CM">CM
-<input type="checkbox" name="where[]" value="チラシ">チラシ
-<input type="checkbox" name="where[]" value="知人の紹介">知人の紹介
+<input type="checkbox" name="where[]" value="1" >インターネット
+<input type="checkbox" name="where[]" value="2">CM
+<input type="checkbox" name="where[]" value="3">チラシ
+<input type="checkbox" name="where[]" value="4">知人の紹介
+</inp>
 </p>
 <!--質問の内容-->
 <p><li>質問の内容について選択ください</li>
     <select name="question">
-        <option value="お仕事の依頼について">お仕事の依頼について</option>
-<option value="製品の購入について">製品の購入について</option>
-<option value="製品について">製品について</option>
-<option value="採用について">採用について</option>
+        <option value="0">お仕事の依頼について</option>
+<option value="1">製品の購入について</option>
+<option value="2">製品について</option>
+<option value="3">採用について</option>
         </select>
     </p>
     <!--質問の内容について-->
     <p><li>質問の内容についてご記入ください</li>
-        <textarea name="inquiry" rows="10" cols="111" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
+        <textarea required name="inquiry" rows="10" cols="100" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
+</textarea>
         <br>
     </p>
-</u1></h2>
-<input type ="submit">
+</h3>
+</u1>
+<inp2><input type ="submit" style="width:200px; height:50px"></inp2>
 </form>
 </div>
 </body>
