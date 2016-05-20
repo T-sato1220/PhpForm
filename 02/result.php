@@ -1,6 +1,21 @@
+<!DOCTYP html>
+<html >
+<head>
+    <meta charset = "utf-8">
+    <title>出力フォーム</title>
+    <LINK rel="stylesheet" type="text/css" href="sample.css">
+</head>
+<body>
+<div class="main2">
+
+<h1><center>お問い合わせ完了</center></h1>
+<form action="result.php" method="post">
+<div class="a">
 <?php
 echo "名前：".$_POST['name1']." ".$_POST['name2']."<br>";
-
+?>
+</div >
+<div class="b"><?php
  $sex=$_POST['rdo'];
  echo "性別：　";
 if($sex == 0 ){
@@ -10,28 +25,49 @@ if($sex == 0 ){
     }elseif($sex == 2){
         echo "女<br>";
     }
-
-
+?></div>
+<div class="a"><?php
 echo "住所：".$_POST['address']."<br>";
-
+?>
+</div>
+<div class="b"><?php
 echo "電話番号：".$_POST['tell1']."-".$_POST['tell2']."-".$_POST['tell3']."<br>";
+?>
+</div>
+<div class="a">
+<?php
 echo "E-mail:".$_POST['mail1']."@".$_POST['mail2']."<br>";
-
+?>
+</div>
+<div class="b">
+<?php
 echo "知った理由";
-
+$where  = array("なし","インターネット" ,"CM","チラシ","知人の紹介");
 $aa = $_POST['where'] ;
-if(0<$aa){
 $n = count($aa);
 for($i=0;$i<$n; $i++){
-echo "：".$aa[$i]." ";
+    echo "：".$where[$aa[$i]];
 }
-}else{
-    echo "：なし";
-}
-echo "<br>";
-
-echo "質問内容：".$_POST['question']."<br>";
-
-echo $_POST['inquiry'];
+?>
+</div>
+<div class="a">
+<?php
+$question = array("お仕事の依頼について", "製品の購入について","製品について","採用について");
+echo "質問項目：".$question[$_POST['question']]."<br>";
+?>
+</div>
+<div class="b">
+    <?php
+echo "質問の内容:<br>";
 
  ?>
+ <textarea  readonly name="inquiry" rows="10" cols="70" ><?php
+ echo $_POST['inquiry'];
+  ?></textarea>
+  </div>
+</form>
+<inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
+</div>
+</body>
+
+</html>
