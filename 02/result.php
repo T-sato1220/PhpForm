@@ -58,15 +58,20 @@ echo "質問項目：".$question[$_POST['question']]."<br>";
 </div>
 <div class="b">
     <?php
-echo "質問の内容:<br>";
+echo "質問の内容：<br>";
 
  ?>
  <textarea  readonly name="inquiry" rows="10" cols="70" ><?php
  echo $_POST['inquiry'];
   ?></textarea>
-  </div>
-</form>
-<inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
+
+
+<center><inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
+</center>
+
+      </div>
+
+    </form>
 </div>
 </body>
 
