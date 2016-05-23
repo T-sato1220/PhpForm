@@ -3,8 +3,8 @@
 <head>
     <meta charset = "utf-8">
     <title>質問フォーム</title>
-        <link rel="stylesheet" type="text/css" href="sample1.css">
-            <A Href="http://localhost/Phpform/02/contact2.php">みずいろ</A>
+        <link rel="stylesheet" type="text/css" href="sample.css">
+        <A  Href="http://localhost/Phpform/02/contact1.php" >きみどり</A>
 </head>
 
 
@@ -25,7 +25,7 @@
     <!--//電話番号-->
 <dt><li>ｔell　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "number"  min="0" max="9999" step="1" style="width:100px" name="tell1">
 - <input required type = "number" min="0" max="9999" step="1" style="width:100px" name="tell2">
-- <input required type = "number"min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
+- <input required type = "number" min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
     <!--//アドレス-->
 <dt><li>e-mail　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "text"    name="mail1" pattern="^[0-9A-Za-z]+$" pattern ="^(?!.*<).+$" size="20"> @
     <input required type = "text" name="mail2"  pattern="^[0-9A-Za-z]+$" pattern ="^(?!.*<).+$" size="20"></dd>
