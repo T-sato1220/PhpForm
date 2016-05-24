@@ -14,7 +14,7 @@
 
 <h1><center>お問い合わせ</center></h1>
 <form action="result.php" method="post">
-<h2><dt><li>性　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1" pattern ="^(?!.*<).+$" size="20"></dd>
+<h2><dt><li>姓　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1" pattern ="^(?!.*<).+$" size="20"></dd>
 <dt><li>名　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="name2" pattern ="^(?!.*<).+$" size="20"><dd></h2>
 　   <!--//性別-->
 <h2><dt><li>性別</li></dt><dd><input   type = "radio" name="rdo" value =0 checked >不明

@@ -4,7 +4,7 @@ h1{
     border: 1px solid #000;
     border-bottom: 0;
     margin-bottom: 0;
-background-color : #00ff00;
+background-color : #00FF00;
 }
 h2{
 
@@ -35,7 +35,7 @@ form{
 }
 li{
     padding-left: 10px;
-    background-color : #00ff00;
+    background-color : #00FF00;
 }
 select{
     margin-left: 30px;
@@ -76,7 +76,7 @@ select{
              border-top: 0;
              border-left: 0;
              border-right:0;
-  background-color : #00ff00;
+  background-color : #00FF00;
       }
       div .b{
            border-style: solid;
