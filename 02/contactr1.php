@@ -21,7 +21,7 @@
     <body>
             <div class="main">
                 <h1><center>お問い合わせ</center></h1>
-            <form action="result.php" method="post">
+            <form action="result2.php" method="post">
 
                 <!--CSSファイルを切り替えと表示するためのプルダウンメニューを記述します。-->
             <select class=change name=linka onchange="changesytle('sample',value);">

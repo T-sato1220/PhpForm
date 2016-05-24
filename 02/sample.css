@@ -40,6 +40,13 @@ li{
 select{
     margin-left: 30px;
 }
+
+.change {
+    position: absolute;
+    top :10;
+    left: 10;
+}
+
     textarea{
         margin-left: 30px;
     }
