@@ -87,35 +87,22 @@ echo "質問の内容<br>";
       </form>
   </div>
 <?php
+    $file = 'contact_log.txt';
 $current = file_get_contents($file);
-// 新しい人物をファイルに追加します
 $current .= "{"."読み込むCSS".$_POST['linka']."\n";
     $current .= "名前".$_POST['name1']." ".$_POST['name2']."\n";
      $sex=$_POST['rdo'];
     if($sex == 0 ){
         $file = 'contact_log.txt';
-        // ファイルをオープンして既存のコンテンツを取得します
-        $current = file_get_contents($file);
-        // 新しい人物をファイルに追加します
         $current .= "性別：　不明 \n";
-        // 結果をファイルに書き出します
-        file_put_contents($file, $current);
     }elseif($sex == 1){
             $file = 'contact_log.txt';
-            // ファイルをオープンして既存のコンテンツを取得します
-            $current = file_get_contents($file);
-            // 新しい人物をファイルに追加します
+
             $current .= "男 \n";
-            // 結果をファイルに書き出します
-            file_put_contents($file, $current);
+
         }elseif($sex == 2){
             $file = 'contact_log.txt';
-            // ファイルをオープンして既存のコンテンツを取得します
-            $current = file_get_contents($file);
-            // 新しい人物をファイルに追加します
             $current .= "女 \n";
-            // 結果をファイルに書き出します
-            file_put_contents($file, $current);
         }
         $current .= "住所：".$_POST['address']."\n";
         $current .=  "電話番号：".$_POST['tell1']."-".$_POST['tell2']."-".$_POST['tell3']."\n";
@@ -130,7 +117,7 @@ $current .= "{"."読み込むCSS".$_POST['linka']."\n";
             $current .=   $_POST['inquiry']."}"."\n".date('Y年m月d日 H時i分s秒',time())."\n\n";
 // 結果をファイルに書き出します
 file_put_contents($file, $current);
- ?>>
+ ?>
 <center><inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
 </center>
 

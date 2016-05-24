@@ -5,6 +5,7 @@
             <title>質問フォーム</title>
     <!--css最初の読み込み-->
             <link rel="stylesheet" type="text/css" href="sample.css">
+
     <!---js リンク先のID指定-->
         <link rel="stylesheet" type="text/css"
             href="style.css" id="sample">
@@ -29,7 +30,7 @@
                     <option   value="sample1.css">きみどり</option>
                     <option   value="sample2.css">ピンク</option>
                 </select>
-                <h2><dt><li>性　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
+                <h2><dt><li>姓　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
                 <dt><li>名　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="name2" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"><dd></h2>
 　   <!--//性別-->
                 <h2><dt><li>性別</li></dt><dd><input   type = "radio" name="rdo" value =0 checked >不明
@@ -66,7 +67,7 @@
         </p>
     <!--質問の内容について-->
         <li>質問の内容についてご記入ください　　　　　<font size="3" color="#ff0000">必須</font></li>
-            <textarea required pattern="(?!/s).+$" name="inquiry" rows="20" cols="100" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
+            <textarea required  wrap="hard" pattern="(?!/s).+$" name="inquiry" rows="20" cols="100" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
             <center><input type ="submit" style="width:200px; height:50px">
 　           <input type="reset"style="width:200px; height:50px" value="リセット"></center>
         </h2>
