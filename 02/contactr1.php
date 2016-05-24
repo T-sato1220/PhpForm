@@ -21,6 +21,7 @@
 
     <body>
             <div class="main">
+        
                 <h1><center>お問い合わせ</center></h1>
             <form action="result2.php" method="post">
 
@@ -30,8 +31,10 @@
                     <option   value="sample1.css">きみどり</option>
                     <option   value="sample2.css">ピンク</option>
                 </select>
+
                 <h2><dt><li>姓　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
-                <dt><li>名　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="name2" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"><dd></h2>
+            <dt><li>名　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="name2" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="20"><dd></h2>
+
 　   <!--//性別-->
                 <h2><dt><li>性別</li></dt><dd><input   type = "radio" name="rdo" value =0 checked >不明
                     <input type = "radio" name="rdo" value =1 >男
