@@ -1,38 +1,34 @@
 h1{
     clor: black;
     font-size:40px;
-    border: 1px solid #000;
-    border-bottom: 0;
+    border: 2px solid #000;
+    border-bottom: 1;
     margin-bottom: 0;
 background-color : #F0FFFF;
-}
-h2{
-
-    clor: black;
-    font-size:20px;
-    border: 1px solid #000;
-    margin-bottom: 0;
-    margin-top : 20px;
-    border-top: 0;
-    border-left: 0;
-    border-right:0;
-    padding-bottom: 20px;
-
 }
 .main {
     margin: 0 auto;
     margin-top: 10px;
-    width: 800px;
+    width: 600px;
 }
 .main2 {
     margin: 0 auto;
     margin-top: 10px;
     width: 600px;
 }
-
-form{
-        border: 2px solid #000;
+.bar{
+    border: 2px solid #000;
+    border-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
+    .br{
+        border: 2px solid #000;
+        border-top: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
 li{
     padding-left: 10px;
     background-color : #F0FFFF;
@@ -60,20 +56,16 @@ select{
       padding-bottom : 10px;
       padding-left : 10px;
       width : 150px;
-    /* 左寄せ */
       float : left;
-    /* float解除 */
       clear : both;
     }
 
     dd{
-
       padding-top : 0px;
       padding-left : 10px;
       padding-right : 10px;
       padding-bottom : 10px;
       width : 400px;
-    /* dtの幅分の設定 */
       margin-left : 160px;
     }
     div .a{
@@ -100,6 +92,7 @@ select{
                  border-top: 0;
                  border-left: 30px;
                  border-right:30px;
+                 border-bottom: 0;
              border-color: #000080;
              background-color : #F0FFFF;
 
