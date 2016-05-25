@@ -1,37 +1,26 @@
 h1{
     clor: black;
     font-size:40px;
-    border: 1px solid #000;
-    border-bottom: 0;
+    border: 2px solid #000;
+    border-bottom: 1;
     margin-bottom: 0;
 background-color : #00FF00;
-}
-h2{
-
-    clor: black;
-    font-size:20px;
-    border: 1px solid #000;
-    margin-bottom: 0;
-    margin-top : 20px;
-    border-top: 0;
-    border-left: 0;
-    border-right:0;
-    padding-bottom: 20px;
-
 }
 .main {
     margin: 0 auto;
     margin-top: 10px;
-    width: 800px;
+    width: 600px;
 }
 .main2 {
     margin: 0 auto;
     margin-top: 10px;
     width: 600px;
 }
-
-form{
-        border: 2px solid #000;
+.bar{
+    border: 2px solid #000;
+    border-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 li{
     padding-left: 10px;
@@ -40,6 +29,13 @@ li{
 select{
     margin-left: 30px;
 }
+
+.change {
+    position: absolute;
+    top :10;
+    left: 10;
+}
+
     textarea{
         margin-left: 30px;
     }
@@ -87,3 +83,14 @@ select{
            border-color: #000080;
 
         }
+        div .c{
+             border-style: solid;
+             border-width: 1px;
+                 border-top: 0;
+                 border-left: 30px;
+                 border-right:30px;
+             border-color: #000080;
+              border-bottom: 0;
+             background-color : #00FF00;
+
+          }

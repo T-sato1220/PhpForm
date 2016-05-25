@@ -27,12 +27,12 @@ document.getElementById(cssid).href = cssfile;
 <div class="main2">
 
 <h1><center>お問い合わせ完了</center></h1>
-<form action="result.php" method="post">
+<div class="bar">
 <div class="a">
 <?php
 echo "名前：".$_POST['name1']." ".$_POST['name2']."<br>";
 ?>
-</div >
+</div>
 <div class="b"><?php
  $sex=$_POST['rdo'];
  echo "性別：　";
@@ -79,12 +79,12 @@ echo "質問項目：".$question[$_POST['question']]."<br>";
 echo "質問の内容<br>";
   ?>
   </div>
- <div class="a"><?php
+ <div class="c"><?php
     $bb =nl2br($_POST['inquiry']);
     echo $bb;
   ?></br>
 
-      </form>
+ </div>
   </div>
 <?php
     $file = 'contact_log.txt';
@@ -118,8 +118,10 @@ $current .= "{"."読み込むCSS".$_POST['linka']."\n";
 // 結果をファイルに書き出します
 file_put_contents($file, $current);
  ?>
+
 <center><inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
 </center>
+
 
 
 
