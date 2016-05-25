@@ -56,9 +56,7 @@ select{
       padding-bottom : 10px;
       padding-left : 10px;
       width : 150px;
-    /* 左寄せ */
       float : left;
-    /* float解除 */
       clear : both;
     }
 
@@ -68,7 +66,6 @@ select{
       padding-right : 10px;
       padding-bottom : 10px;
       width : 400px;
-    /* dtの幅分の設定 */
       margin-left : 160px;
     }
     div .a{

@@ -5,6 +5,12 @@
             <title>質問フォーム</title>
     <!--css最初の読み込み-->
             <link rel="stylesheet" type="text/css" href="sample.css">
+            <?php
+            if(empty($_POST['linka'])===false){
+         $linka = $_POST['linka'] ;
+            echo "<link rel= 'stylesheet' type= 'text/css' href= $linka>";
+        }
+        ?>
 
     <!---js リンク先のID指定-->
         <link rel="stylesheet" type="text/css"
@@ -75,7 +81,7 @@
     <!--質問の内容について-->
         <li>質問の内容についてご記入ください　　　　　<font size="3" color="#ff0000">必須</font></li>
             <textarea required  wrap="hard" pattern="(?!/s).+$" name="inquiry" rows="10" cols="65" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
-            <center><input type ="submit" style="width:200px; height:50px">
+            <center><input type ="submit" style="width:200px; height:50px" >
 　           <input type="reset"style="width:200px; height:50px" value="リセット"></center>
                </form>
 

@@ -17,11 +17,7 @@ document.getElementById(cssid).href = cssfile;
 }
 </script>
 <!--CSSファイルを切り替えと表示するためのプルダウンメニューを記述します。-->
-<select onchange="changesytle('sample',value);">
-   <option value="sample.css">水色</option>
-   <option value="sample1.css">きみどり</option>
-   <option value="sample2.css">ピンク</option>
-</select>
+
 </head>
 <body>
 <div class="main2">
@@ -118,11 +114,13 @@ $current .= "{"."読み込むCSS".$_POST['linka']."\n";
 // 結果をファイルに書き出します
 file_put_contents($file, $current);
  ?>
+<form action="contactr2.php" method="post">
+    <?php
+echo  "<input type='hidden' name='linka' value=  '$linka'>";
 
-<center><inp2><INPUT type="button" value="戻る" onClick="history.go(-1)"style="width:200px; height:50px"></inp2>
-</center>
-
-
+?>
+<input type ="submit" style="width:200px; height:50px" value="戻る">;
+</form>
 
 
 </body>
