@@ -24,7 +24,13 @@
             <h1><center>お問い合わせ完了</center></h1>
             <div class="bar"><div class="a">
             <?php
+            $cname1=count($_POST['name1']);
+            $cname2=count($_POST['name2']);
+            if($cname1>0 && $cname2>0){
             echo "名前：".$_POST['name1']." ".$_POST['name2']."<br>";
+            }else{
+                    echo "名前：未記入<br>";
+        }
             ?>
         </div>
         <div class="b"><?php
@@ -39,13 +45,25 @@
             }
             ?></div>
         <div class="a"><?php
+        if($_POST['address']==0){
+            echo "住所：未記入<br>";
+        }else{
         echo "住所：".$_POST['address']."<br>";
+        }
         ?></div>
         <div class="b"><?php
+        if($_POST['tell1']>0 && $_POST['tell2']>0 && $_POST['tell3']>0){
         echo "電話番号：".$_POST['tell1']."-".$_POST['tell2']."-".$_POST['tell3']."<br>";
+    }else{
+        echo "電話番号：未記入<br>";
+    }
         ?></div>
         <div class="a"><?php
+        if($_POST['mail1']>0 && $_POST['mail2']>0 ){
         echo "E-mail:".$_POST['mail1']."@".$_POST['mail2']."<br>";
+    }else{
+        echo "E-mail:未記入";
+    }
         ?></div>
         <div class="b"><?php
         echo "知った理由";
@@ -65,9 +83,13 @@
     echo "質問の内容<br>";
     ?></div>
     <div class="c"><?php
+    if($_POST['inquiry']>0){
         $bb =nl2br($_POST['inquiry']);
         echo $bb;
-    ?></br>
+    }else{
+        echo "未記入";
+    }
+       ?></br>
 
     </div>
         </div>
@@ -105,10 +127,13 @@
             ?>
             <form action="contact.php" method="post">
                 <?php
+                $name1 = $_POST['name1'];
+                $name2 = $_POST['name2'];
                 echo  "<input type='hidden' name='linka' value=  '$linka'>";
-
+                echo  "<input type='hidden' name='name1' value=  '$name1'>";
+                echo  "<input type='hidden' name='name2' value=  '$name2'>";
                 ?>
-                <input type ="submit" style="width:200px; height:50px" value="戻る">;
+                <input type ="submit" style="width:200px; height:50px" value="戻る">
             </form>
 
 

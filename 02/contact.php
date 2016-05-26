@@ -40,8 +40,24 @@
                     <option   value="sample2.css">ピンク</option>
                 </select>
 <!--名前の入力、入力内容の制限-->
-            <dt><li>姓　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "textbox" name="name1"placeholder="例）阿井" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="25"></dd>
-            <dt><li>名　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="name2" pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$" size="25"></dd>
+<?php
+    if(empty($_POST['name1'])===false){
+$name1 = $_POST['name1'];
+echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name1'
+name='name1'placeholder='例）OST' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+}else{
+echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox'
+ name='name1'placeholder='例）OST' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+}
+if(empty($_POST['name2'])===false){
+    $name2 = $_POST['name2'];
+    echo   " <dt><li>名　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name2'
+    name='name2'placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+}else{
+    echo  " <dt><li>名　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required  type = 'textbox'
+    name='name2' placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+                }
+?>
     </div>
 
         <div class="br">
@@ -52,14 +68,23 @@
                     <input type = "radio" name="rdo" value =1 >男
                     <input type = "radio" name="rdo" value =2 >女</dd>
     <!--//住所-->
-                <dt><li>住所　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  required type = "textbox" name="address"  pattern="^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$" pattern ="^(?!.*<\s).+$"  size="20"></dd>
+    <?php
+    if(empty($_POST['address'])===false){
+     $address = $_POST['address'];
+                echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' value='$address' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
+                 pattern ='^(?!.*<\s).+$'  size='20'></dd>";
+             }else {
+                 echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
+                  pattern ='^(?!.*<\s).+$'  size='20'></dd>";
+             }
+?>
     <!--//電話番号-->
-                <dt><li>ｔell　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "number"  min="0" max="9999" step="1" style="width:100px" name="tell1">
-                    - <input required type = "number" min="0" max="9999" step="1" style="width:100px" name="tell2">
-                    - <input required type = "number" min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
+                <dt><li>ｔell　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  type = "number" required placeholder="例）000"  min="0" max="9999" step="1" style="width:100px" name="tell1">
+                    - <input  type = "number" required placeholder="例）0000"　min="0" max="9999" step="1" style="width:100px" name="tell2">
+                    - <input  type = "number" required placeholder="例）0000"　min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
     <!--//アドレス-->
-                <dt><li>e-mail　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "text"    name="mail1" pattern="^[0-9A-Za-z._-]+$" pattern ="^(?!.*<\s).+$" size="20"> @
-                    <input required type = "text" name="mail2"  pattern="^[0-9A-Za-z.-]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
+                <dt><li>e-mail　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "text"    name="mail1" placeholder="例）aaaaaaaaa"pattern="^[0-9A-Za-z._-]+$" pattern ="^(?!.*<\s).+$" size="20"> @
+                    <input required type = "text" name="mail2" placeholder="例）ostechnology.co.jp" pattern="^[0-9A-Za-z.-]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
             </div>
     <!--サイトをどこで知ったか-->
     <div class="bar">
