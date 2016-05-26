@@ -34,7 +34,9 @@ li{
     background-color : #F0FFFF;
 }
 select{
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 .change {
@@ -44,7 +46,9 @@ select{
 }
 
     textarea{
-        margin-left: 30px;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-bottom: 10px;
     }
     inp{
     margin-left: 30px;
