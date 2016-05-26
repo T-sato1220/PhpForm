@@ -45,21 +45,30 @@
             }
             ?></div>
         <div class="a"><?php
-        if($_POST['address']==0){
-            echo "住所：未記入<br>";
+        $address=count($_POST['address']);
+        if($address>0){
+            echo "住所：".$_POST['address']."<br>";
         }else{
-        echo "住所：".$_POST['address']."<br>";
+            echo "住所：未記入<br>";
         }
         ?></div>
         <div class="b"><?php
-        if($_POST['tell1']>0 && $_POST['tell2']>0 && $_POST['tell3']>0){
+        $fst1 = (string) $_POST['tell1'];
+        $tell1 = count($fst1);
+        $fst2 = (string) $_POST['tell2'];
+        $tell2 = count($fst2);
+        $fst3 = (string) $_POST['tell3'];
+        $tell3 = count($fst3);
+        if($tell1>0 && $tell2>0 && $tell3>0){
         echo "電話番号：".$_POST['tell1']."-".$_POST['tell2']."-".$_POST['tell3']."<br>";
     }else{
         echo "電話番号：未記入<br>";
     }
         ?></div>
         <div class="a"><?php
-        if($_POST['mail1']>0 && $_POST['mail2']>0 ){
+            $mail1=count($_POST['mail1']);
+                $mail2=count($_POST['mail2']);
+        if($mail1>0 && $mail2>0 ){
         echo "E-mail:".$_POST['mail1']."@".$_POST['mail2']."<br>";
     }else{
         echo "E-mail:未記入";
@@ -83,7 +92,8 @@
     echo "質問の内容<br>";
     ?></div>
     <div class="c"><?php
-    if($_POST['inquiry']>0){
+    $inquiry=count($_POST['inquiry']);
+    if($inquiry>0){
         $bb =nl2br($_POST['inquiry']);
         echo $bb;
     }else{
@@ -129,9 +139,22 @@
                 <?php
                 $name1 = $_POST['name1'];
                 $name2 = $_POST['name2'];
+                $tell1 = $_POST['tell1'];
+                $tell2 = $_POST['tell2'];
+                $tell3 = $_POST['tell3'];
+                $mail1 = $_POST['mail1'];
+                $mail2 = $_POST['mail2'];
+                $inquiry = $_POST['inquiry'];
                 echo  "<input type='hidden' name='linka' value=  '$linka'>";
                 echo  "<input type='hidden' name='name1' value=  '$name1'>";
                 echo  "<input type='hidden' name='name2' value=  '$name2'>";
+                echo  "<input type='hidden' name='address' value=  '$address'>";
+                echo  "<input type='hidden' name='tell1' value=  '$tell1'>";
+                echo  "<input type='hidden' name='tell2' value=  '$tell2'>";
+                echo  "<input type='hidden' name='tell3' value=  '$tell3'>";
+                echo  "<input type='hidden' name='mail1' value=  '$mail1'>";
+                echo  "<input type='hidden' name='mail2' value=  '$mail2'>";
+                echo  "<input type='hidden' name='inquiry' value=  '$inquiry'>";
                 ?>
                 <input type ="submit" style="width:200px; height:50px" value="戻る">
             </form>

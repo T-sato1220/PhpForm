@@ -43,19 +43,19 @@
 <?php
     if(empty($_POST['name1'])===false){
 $name1 = $_POST['name1'];
-echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name1'
-name='name1'placeholder='例）OST' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required wrap='hard' type = 'textbox' value='$name1'
+name='name1'placeholder='例）OST' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' size='25'></dd>";
 }else{
-echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox'
- name='name1'placeholder='例）OST' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required  wrap='hard' type = 'textbox'
+ name='name1'placeholder='例）OST' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' size='25'></dd>";
 }
 if(empty($_POST['name2'])===false){
     $name2 = $_POST['name2'];
     echo   " <dt><li>名　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name2'
-    name='name2'placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+    name='name2'placeholder='例）太郎' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
 }else{
     echo  " <dt><li>名　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required  type = 'textbox'
-    name='name2' placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' pattern ='^(?!.*<\s).+$' size='25'></dd>";
+    name='name2' placeholder='例）太郎' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
                 }
 ?>
     </div>
@@ -72,19 +72,49 @@ if(empty($_POST['name2'])===false){
     if(empty($_POST['address'])===false){
      $address = $_POST['address'];
                 echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' value='$address' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
-                 pattern ='^(?!.*<\s).+$'  size='20'></dd>";
+              size='20'></dd>";
              }else {
                  echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
-                  pattern ='^(?!.*<\s).+$'  size='20'></dd>";
+          size='20'></dd>";
              }
 ?>
     <!--//電話番号-->
-                <dt><li>ｔell　　　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input  type = "number" required placeholder="例）000"  min="0" max="9999" step="1" style="width:100px" name="tell1">
-                    - <input  type = "number" required placeholder="例）0000"　min="0" max="9999" step="1" style="width:100px" name="tell2">
-                    - <input  type = "number" required placeholder="例）0000"　min="0" max="9999" step="1" style="width:100px"  name="tell3" size="10"></dd>
+    <?php
+    if(empty($_POST['tell1'])===false){
+        $tell1 = $_POST['tell1'];
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' value='$tell1' name='tell1'>";
+        }else{
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell1'>";
+        }
+        if(empty($_POST['tell2'])===false){
+            $tell2 = $_POST['tell2'];
+                echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell2' maxlength='4' name='tell2'>";
+                }else{
+                    echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell2'>";
+}
+if(empty($_POST['tell3'])===false){
+    $tell3 = $_POST['tell3'];
+        echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell3' maxlength='4' name='tell3'></dd>";
+        }else{
+            echo    " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell3'></dd>";
+}
+
+?>
     <!--//アドレス-->
-                <dt><li>e-mail　　<font size="3" color="#ff0000">必須</font></li></dt><dd><input required type = "text"    name="mail1" placeholder="例）aaaaaaaaa"pattern="^[0-9A-Za-z._-]+$" pattern ="^(?!.*<\s).+$" size="20"> @
-                    <input required type = "text" name="mail2" placeholder="例）ostechnology.co.jp" pattern="^[0-9A-Za-z.-]+$" pattern ="^(?!.*<\s).+$" size="20"></dd>
+    <?php
+    if(empty($_POST['mail1'])===false){
+            $mail1 = $_POST['mail1'];
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  value='$mail1'  name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'  size='20'> @";
+    }else{
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'    name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'size='20'> @";
+    }
+if(empty($_POST['mail2'])===false){
+    $mail2 = $_POST['mail2'];
+        echo           " <input required type = 'text'value='$mail2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+    }else{
+                echo           " <input required type = 'text' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+        }
+?>
             </div>
     <!--サイトをどこで知ったか-->
     <div class="bar">
@@ -107,10 +137,17 @@ if(empty($_POST['name2'])===false){
 
     <!--質問の内容について-->
         <li>質問の内容についてご記入ください　　　　　<font size="3" color="#ff0000">必須</font></li>
-            <textarea required  wrap="hard" pattern="(?!/s).+$" name="inquiry" rows="10" cols="65" placeholder="ここにお問い合せ内容を記入してください。"></textarea>
+        <?php
+if(empty($_POST['inquiry'])===false){
+    $inquiry = $_POST['inquiry'];
+        echo   " <textarea required  wrap='hard' pattern='(?!/s).+$'  name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'>$inquiry</textarea>";
+    }else{
+        echo   " <textarea required  wrap='hard' pattern='(?!/s).+$' name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'></textarea>";
+    }
+?>
 <!--戻る、リセットボタン-->
             <center><input type ="submit" style="width:200px; height:50px" >
-　           <input type="reset"style="width:200px; height:50px" value="リセット"></center>
+　           <input type="button"　 style="width:200px; height:50px" onclick="location.href='./contact.php'"value="リセット"></center>
                </form>
 
 </div>
