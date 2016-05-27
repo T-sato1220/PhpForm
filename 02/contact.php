@@ -41,21 +41,27 @@
                 </select>
 <!--名前の入力、入力内容の制限-->
 <?php
-    if(empty($_POST['name1'])===false){
+   error_reporting(E_ALL & ~E_NOTICE);
+    if(empty($_POST['name1'])===false && $_POST['nameH']==1){
+            $name1 = $_POST['name1'];
+        echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>ミス</font></li></dt><dd><input  wrap='hard' type = 'textbox' value='$name1'
+        name='name1'placeholder='例）OST'  size='25'></dd>";
+    }elseif(empty($_POST['name1'])===false && $_POST['nameH']==0){
 $name1 = $_POST['name1'];
-echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required wrap='hard' type = 'textbox' value='$name1'
-name='name1'placeholder='例）OST' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' size='25'></dd>";
+echo " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input  wrap='hard' type = 'textbox' value='$name1'
+name='name1'placeholder='例）OST'  size='25'></dd>";
 }else{
-echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required  wrap='hard' type = 'textbox'
- name='name1'placeholder='例）OST' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$' size='25'></dd>";
+echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input   wrap='hard' type = 'textbox'
+ name='name1'placeholder='例）OST'  size='25'></dd>";
 }
+
 if(empty($_POST['name2'])===false){
     $name2 = $_POST['name2'];
-    echo   " <dt><li>名　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name2'
-    name='name2'placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
+    echo   " <dt><li>名　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input  type = 'textbox' value='$name2'
+    name='name2'placeholder='例）太郎'   size='25'></dd>";
 }else{
-    echo  " <dt><li>名　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required  type = 'textbox'
-    name='name2' placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
+    echo  " <dt><li>名　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input   type = 'textbox'
+    name='name2' placeholder='例）太郎'   size='25'></dd>";
                 }
 ?>
     </div>
@@ -71,10 +77,10 @@ if(empty($_POST['name2'])===false){
     <?php
     if(empty($_POST['address'])===false){
      $address = $_POST['address'];
-                echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' value='$address' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
+                echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input   type = 'textbox' value='$address' name='address' minlength='7' placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
               size='20'></dd>";
              }else {
-                 echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  required type = 'textbox' name='address'  placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
+                 echo "<dt><li>住所　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input   type = 'textbox' name='address'  minlength='7' placeholder='例）東京都'　pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'
           size='20'></dd>";
              }
 ?>
@@ -82,21 +88,21 @@ if(empty($_POST['name2'])===false){
     <?php
     if(empty($_POST['tell1'])===false){
         $tell1 = $_POST['tell1'];
-            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2 maxlength='4' value='$tell1' name='tell1'>";
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'textbox'  placeholder='例）000' size=5  minlength='2' maxlength='4' value='$tell1' name='tell1'>";
         }else{
-            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell1'>";
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input type = 'textbox'  placeholder='例）000' size=5  minlength='2' maxlength='4' name='tell1'>";
         }
         if(empty($_POST['tell2'])===false){
             $tell2 = $_POST['tell2'];
-                echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell2' minlength='2' maxlength='4' name='tell2'>";
+                echo   " - <input  type = 'textbox'  placeholder='例）000' size=5   value='$tell2' minlength='2' maxlength='4' name='tell2'>";
                 }else{
-                    echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell2'>";
+                    echo   " - <input  type = 'textbox'  placeholder='例）000' size=5  minlength='2' maxlength='4' name='tell2'>";
 }
 if(empty($_POST['tell3'])===false){
     $tell3 = $_POST['tell3'];
-        echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell3' minlength='2' maxlength='4' name='tell3'></dd>";
+        echo   " - <input  type = 'textbox'  placeholder='例）000' size=5   value='$tell3' minlength='2' maxlength='4' name='tell3'></dd>";
         }else{
-            echo    " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell3'></dd>";
+            echo    " - <input  type = 'textbox'  placeholder='例）000' size=5  minlength='2' maxlength='4' name='tell3'></dd>";
 }
 
 ?>
@@ -104,15 +110,15 @@ if(empty($_POST['tell3'])===false){
     <?php
     if(empty($_POST['mail1'])===false){
             $mail1 = $_POST['mail1'];
-        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  value='$mail1' minlength='2' name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'  size='20'> @";
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'text'  value='$mail1' minlength='2' name='mail1' placeholder='例）aaaaaaaaa' size='20'> @";
     }else{
-        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  minlength='2'  name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'size='20'> @";
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'text'  minlength='2'  name='mail1' placeholder='例）aaaaaaaaa' size='20'> @";
     }
 if(empty($_POST['mail2'])===false){
     $mail2 = $_POST['mail2'];
-        echo           " <input required type = 'text'value='$mail2' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+        echo           " <input  type = 'text'value='$mail2' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp' size='20'></dd>";
     }else{
-                echo           " <input required type = 'text' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+                echo           " <input  type = 'text' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp'  size='20'></dd>";
         }
 ?>
             </div>
@@ -140,9 +146,9 @@ if(empty($_POST['mail2'])===false){
         <?php
 if(empty($_POST['inquiry'])===false){
     $inquiry = $_POST['inquiry'];
-        echo   " <textarea required  wrap='hard' pattern='(?!/s).+$'  name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'>$inquiry</textarea>";
+        echo   " <textarea   wrap='hard' pattern='(?!/s).+$'  name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'>$inquiry</textarea>";
     }else{
-        echo   " <textarea required  wrap='hard' pattern='(?!/s).+$' name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'></textarea>";
+        echo   " <textarea   wrap='hard' pattern='(?!/s).+$' name='inquiry' rows='10' cols='65' placeholder='ここにお問い合せ内容を記入してください。'></textarea>";
     }
 ?>
 <!--戻る、リセットボタン-->
