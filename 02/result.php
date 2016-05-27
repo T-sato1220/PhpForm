@@ -28,9 +28,9 @@
             $sname1=strlen($_POST['name1']);
             $sname2=strlen($_POST['name2']);
 
-            if($sname1>0 && $sname2>0){
-                if(preg_match("/^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$/", $_POST['name1']) && preg_match("/^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$/", $_POST['name2'])){
-            echo "名前：".$_POST['name1']." ".$_POST['name2']."<br>";
+            if($sname1>0){
+                if(preg_match("/^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$/", $_POST['name1']) ){
+            echo "名前：".$_POST['name1']." ";
         }else{
             echo    "<form action='contact.php' method='post'>";
             echo    "<input type ='submit' style='height:20px' value='値が不正です。　ここを押してください'>";
@@ -38,9 +38,22 @@
               $flag=1;
         }
             }else{
-                    echo "名前：未記入<br>";
+                    echo "姓：未記入<br>";
                       $flag=1;
         }
+         if( $sname2>0){
+                        if(preg_match("/^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$/", $_POST['name2'])){
+                    echo $_POST['name2']."<br>";
+                }else{
+                    echo    "<form action='contact.php' method='post'>";
+                    echo    "<input type ='submit' style='height:20px' value='値が不正です。　ここを押してください'>";
+                        echo  "<input type='hidden' name='nameN' value= 1>";
+                      $flag=1;
+                }
+                    }else{
+                            echo "名：未記入<br>";
+                              $flag=1;
+                }
             ?>
         </div>
         <div class="b"><?php
