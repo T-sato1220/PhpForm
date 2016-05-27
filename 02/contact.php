@@ -82,21 +82,21 @@ if(empty($_POST['name2'])===false){
     <?php
     if(empty($_POST['tell1'])===false){
         $tell1 = $_POST['tell1'];
-            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' value='$tell1' name='tell1'>";
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2 maxlength='4' value='$tell1' name='tell1'>";
         }else{
-            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell1'>";
+            echo    "<dt><li>ｔell　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell1'>";
         }
         if(empty($_POST['tell2'])===false){
             $tell2 = $_POST['tell2'];
-                echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell2' maxlength='4' name='tell2'>";
+                echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell2' minlength='2' maxlength='4' name='tell2'>";
                 }else{
-                    echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell2'>";
+                    echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell2'>";
 }
 if(empty($_POST['tell3'])===false){
     $tell3 = $_POST['tell3'];
-        echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell3' maxlength='4' name='tell3'></dd>";
+        echo   " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$'  value='$tell3' minlength='2' maxlength='4' name='tell3'></dd>";
         }else{
-            echo    " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' maxlength='4' name='tell3'></dd>";
+            echo    " - <input  type = 'textbox' required placeholder='例）000' size=5 pattern='^[0-9]+$' minlength='2' maxlength='4' name='tell3'></dd>";
 }
 
 ?>
@@ -104,15 +104,15 @@ if(empty($_POST['tell3'])===false){
     <?php
     if(empty($_POST['mail1'])===false){
             $mail1 = $_POST['mail1'];
-        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  value='$mail1'  name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'  size='20'> @";
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  value='$mail1' minlength='2' name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'  size='20'> @";
     }else{
-        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'    name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'size='20'> @";
+        echo        " <dt><li>e-mail　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required type = 'text'  minlength='2'  name='mail1' placeholder='例）aaaaaaaaa'pattern='^[0-9A-Za-z._-]+$'size='20'> @";
     }
 if(empty($_POST['mail2'])===false){
     $mail2 = $_POST['mail2'];
-        echo           " <input required type = 'text'value='$mail2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+        echo           " <input required type = 'text'value='$mail2' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
     }else{
-                echo           " <input required type = 'text' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
+                echo           " <input required type = 'text' minlength='2' name='mail2' placeholder='例）ostechnology.co.jp' pattern='^[0-9A-Za-z.-]+$' pattern ='^(?!.*<\s).+$' size='20'></dd>";
         }
 ?>
             </div>
