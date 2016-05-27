@@ -66,8 +66,11 @@
     }
         ?></div>
         <div class="a"><?php
-            $mail1=count($_POST['mail1']);
-                $mail2=count($_POST['mail2']);
+                $fs1 = (string) $_POST['mail1'];
+
+            $mail1=count($fs1);
+            $fs2 = (string) $_POST['mail2'];
+                $mail2=count($fs2);
         if($mail1>0 && $mail2>0 ){
         echo "E-mail:".$_POST['mail1']."@".$_POST['mail2']."<br>";
     }else{
@@ -139,6 +142,7 @@
                 <?php
                 $name1 = $_POST['name1'];
                 $name2 = $_POST['name2'];
+                $address= $_POST['address'];
                 $tell1 = $_POST['tell1'];
                 $tell2 = $_POST['tell2'];
                 $tell3 = $_POST['tell3'];

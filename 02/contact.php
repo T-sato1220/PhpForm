@@ -52,10 +52,10 @@ echo    " <dt><li>姓　　　　<font size='3' color= '#ff0000'>必須</font></
 if(empty($_POST['name2'])===false){
     $name2 = $_POST['name2'];
     echo   " <dt><li>名　　　　<font size='3' color= '#ff0000'>必須</font></li></dt><dd><input required type = 'textbox' value='$name2'
-    name='name2'placeholder='例）太郎' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
+    name='name2'placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
 }else{
     echo  " <dt><li>名　　　　<font size='3' color='#ff0000'>必須</font></li></dt><dd><input required  type = 'textbox'
-    name='name2' placeholder='例）太郎' pattern='^[a-zA-Zａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
+    name='name2' placeholder='例）太郎' pattern='^[a-zA-Z0-9ａ-ｚＡ-Ｚァ-ンぁ-ん一-龥]+$'  size='25'></dd>";
                 }
 ?>
     </div>
